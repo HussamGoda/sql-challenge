@@ -1,3 +1,11 @@
+-- Read all tables first to check imported dadta
+SELECT * FROM departments;
+SELECT * FROM titles;
+SELECT * FROM employees;
+SELECT * FROM dept_manager;
+SELECT * FROM salaries;
+SELECT * FROM dept_emp;
+
 --List the employee number, last name, first name, sex, and salary of each employee
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary 
 FROM employees
@@ -7,8 +15,8 @@ salaries.emp_no=employees.emp_no;
 --List the first name, last name, and hire date for the employees who were hired in 1986
 SELECT first_name, last_name, hire_date
 FROM employees
-WHERE hire_date>'1985-12-31'
-AND hire_date<'1987-01-01';
+WHERE hire_date > '1985-12-31'
+AND hire_date < '1987-01-01';
 
 -- List the manager of each department along with their department number, department name, employee number,
 -- last name, and first name
